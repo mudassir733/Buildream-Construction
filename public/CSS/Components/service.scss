@@ -1,0 +1,163 @@
+section {
+    .title {
+        color: $secondary-color;
+        font-size: 3.20rem;
+        padding: 10px 0 30px 0;
+        font-weight: 500;
+    }
+
+    .container {
+        .services_row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            width: 100%;
+
+            .image_column {
+
+                .image {
+                    width: 550px;
+                    height: 800px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        display: block;
+                    }
+                }
+            }
+
+            .service_column {
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+
+                .box {
+                    background-color: $secondary-color;
+                    padding: 30px;
+                    box-shadow: 0 0 10px rgba($secondary-color, 0.1);
+                    display: flex;
+                    gap: 1rem;
+                    color: $white-color;
+
+                    h2 {
+                        font-weight: 500;
+                        line-height: 2;
+                        padding-bottom: 10px;
+                    }
+
+                    p {
+                        padding-bottom: 20px;
+                    }
+
+
+                    &:nth-child(2) {
+                        background-color: $primary-color;
+                        color: $white-color;
+                    }
+
+                    &:nth-child(3) {
+                        background-color: $white-color;
+
+                        h2 {
+                            color: $secondary-color;
+                        }
+
+                        p {
+                            color: rgba($secondary-color, 0.5);
+                        }
+
+                        a {
+                            border: 1px solid rgba($secondary-color, 0.2);
+                        }
+
+                        &:hover {
+                            background-color: $secondary-color;
+
+                            h2 {
+                                color: $white-color;
+                            }
+
+                            p {
+                                color: $white-color;
+                            }
+
+                        }
+
+                        &:hover img {
+                            filter: brightness(30);
+                        }
+
+
+                    }
+
+                    .icons {
+                        img {
+                            padding-top: 10px;
+                        }
+                    }
+
+                    a {
+                        text-transform: uppercase;
+                        background-color: $white-color;
+                        color: $primary-color;
+                        padding: 5px 10px;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+
+                    }
+
+
+                }
+            }
+
+
+        }
+    }
+}
+// <======= Media Queyries For (Medium Devices) ========>
+@media screen and (max-width: 1100px) {
+    section{
+        .container{
+            width: $container-md;
+            .services_row{
+                .image_column{
+                    .image{
+                        width: 450px;
+                        height: 850px;
+                    }
+                }
+                .service_column{
+                    .box{
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+// <======= Media Queyries For (Small Devices) ========>
+@media screen and (max-width: 800px) {
+    section{
+        .container{
+            .services_row{
+                grid-template-columns: 1fr;
+                .image_column{
+                    display: none;
+                }
+                .service_column{
+                    grid-template-columns: 1fr;
+
+                    .box{
+                        gap: 2rem;
+                        h2{
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

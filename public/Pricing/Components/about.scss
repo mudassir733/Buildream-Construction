@@ -1,0 +1,178 @@
+.about_section {
+    overflow: hidden;
+
+    .container {
+        .wrapper {
+            display: flex;
+            gap: 2rem;
+
+            .image_column {
+                width: 1600px;
+                height: 800px;
+                position: relative;
+
+                &>img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .label {
+                    position: absolute;
+                    padding: 26px;
+                    background-color: $secondary-color;
+                    display: flex;
+                    bottom: 107px;
+                    right: -106px;
+                    gap: 1rem;
+                    transform: rotate(270deg);
+
+                    &>img {
+                        width: 4rem;
+                        object-fit: cover;
+
+
+                    }
+
+                    span {
+                        color: $primary-color;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                    }
+
+                    h5 {
+                        color: $white-color;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .details_column {
+                h2 {
+                    color: $secondary-color;
+                    font-size: 3.70rem;
+                    font-weight: 500;
+                    padding-bottom: 10px;
+                }
+
+                p {
+                    padding-bottom: 10px;
+                }
+
+                h5 {
+                    font-size: 1.6rem;
+                    color: $secondary-color;
+                    font-weight: 500;
+                    padding-bottom: 12px;
+                }
+
+                .services {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+
+
+                    figure {
+                        display: flex;
+                        background-color: $white-color;
+                        padding: 15px;
+                        gap: 1rem;
+                        transition: all 0.2s;
+
+                        &:hover {
+                            background-color: $secondary-color;
+                            color: $white-color;
+                        }
+
+                        &:hover .icons {
+                            color: $white-color;
+                        }
+
+                        &:hover .text>span {
+                            color: $white-color;
+                        }
+
+
+
+
+
+
+                        .icons {
+                            color: $primary-color;
+                            font-size: 3.30rem;
+
+                            i {
+                                padding: 0 10px;
+                            }
+                        }
+
+                        .text {
+                            span {
+                                color: $secondary-color;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// <======= Media Queyries For (Medium Devices) ========>
+@media screen and (max-width: 1100px) {
+    .about_section {
+        .container {
+            width: $container-md;
+
+            .wrapper {
+
+                .details_column {
+                    p {
+                        line-height: 1.5;
+                    }
+
+                    h2 {
+                        font-size: 3.70rem;
+                    }
+
+                    .services {
+                        gap: 10px;
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}
+
+// <======= Media Queyries For (Small Devices) ========>
+@media screen and (max-width: 800px) {
+    .about_section {
+        .container {
+            .wrapper {
+                .image_column {
+                    height: 600px;
+                }
+
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                .details_column {
+                    h2 {
+                        font-size: 2.20rem;
+                    }
+
+                    .services {
+                        grid-template-columns: 1fr;
+                        gap: 0;
+                    }
+                }
+            }
+        }
+    }
+}

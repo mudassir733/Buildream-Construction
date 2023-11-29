@@ -1,0 +1,125 @@
+section {
+
+
+    .banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Images/homeImg/Banner.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 250px;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 600px;
+            background-color: $primary-color;
+            top: 0;
+            left: -45px;
+            bottom: 0;
+            transform: skewX(20deg);
+            z-index: -1;
+        }
+
+        .container {
+            height: 100%;
+            place-items: center;
+            display: grid;
+
+            .banner_details {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                width: 100%;
+
+                article {
+                    h5 {
+                        color: $white-color;
+                        text-transform: uppercase;
+                        letter-spacing: 1.2px;
+                    }
+
+                    h2 {
+                        color: $secondary-color;
+                        font-size: 2.30rem;
+                        font-weight: 400;
+                    }
+
+
+                }
+
+                div {
+                    .btn {
+                        background-color: $primary-color;
+                        border: 0;
+                        cursor: pointer;
+                        padding: 1.4rem 3rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: $secondary-color;
+                        box-shadow: 0 4px 20px rgba($secondary-color, 0.3);
+
+                        &:hover {
+                            box-shadow: none;
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}
+
+// <======= Media Queyries For (Medium Devices) ========>>
+@media screen and (max-width: 1100px) {
+    section {
+        .banner {
+
+            &::after {
+                width: 450px;
+                
+            }
+
+            .container {
+                width: $container-md;
+
+                .banner_details {
+
+                    div {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// <======= Media Queyries For (Small Devices) ========>>
+@media screen and (max-width: 800px) {
+    section {
+        .banner {
+            height: fit-content;
+            padding: 20px 0;
+
+            &::after {
+                left: -50px;
+            }
+
+            .container {
+                .banner_details {
+                    grid-template-columns: 1fr;
+
+                    div {
+                        text-align: left;
+                        padding: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}

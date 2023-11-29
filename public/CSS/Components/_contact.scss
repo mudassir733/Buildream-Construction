@@ -1,0 +1,267 @@
+.contact_section {
+    background-color: $white-color;
+    padding: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(/Images/homeImg/bg_2.jpg.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    .container_contact {
+        .contact_row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            .contact_form {
+                background-color: $white-color;
+                padding: 4rem 2rem 4rem 15%;
+
+                .form_sub_heading {
+                    text-transform: uppercase;
+                    color: $primary-color;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+
+                .form_title {
+                    color: $secondary-color;
+                    padding: 14px 0 20px 0;
+                }
+
+                form {
+                    .form_data {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 2rem;
+
+                        .name {
+                            &>label {
+                                display: block;
+                                color: $secondary-color;
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                font-size: 0.8rem;
+                                padding-bottom: 10px;
+                                letter-spacing: 0.7px;
+                            }
+
+                            &>input {
+                                width: 100%;
+                                padding: 10px;
+                                outline: none;
+                                font-size: 0.8rem;
+                                color: rgba($secondary-color, 0.7);
+                                border: 1px solid rgba($secondary-color, 0.5);
+                            }
+                        }
+
+                        .email {
+                            &>label {
+                                display: block;
+                                color: $secondary-color;
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                font-size: 0.8rem;
+                                padding-bottom: 10px;
+                                letter-spacing: 0.7px;
+                            }
+
+                            &>input {
+                                width: 100%;
+                                padding: 10px;
+                                outline: none;
+                                font-size: 0.8rem;
+                                color: rgba($secondary-color, 0.7);
+                                border: 1px solid rgba($secondary-color, 0.5);
+                            }
+                        }
+                    }
+
+                    .subject {
+                        margin-top: 12px;
+
+                        &>label {
+                            display: block;
+                            color: $secondary-color;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-size: 0.8rem;
+                            padding: 10px 0;
+                            letter-spacing: 0.7px;
+                        }
+
+                        &>select {
+                            width: 100%;
+                            padding: 12px;
+                            appearance: none;
+                            background-color: transparent;
+                            border: 1px solid rgba($secondary-color, 0.5);
+                        }
+                    }
+
+                    .message {
+                        margin-top: 15px;
+
+                        &>label {
+                            display: block;
+                            color: $secondary-color;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-size: 0.8rem;
+                            padding: 10px 0;
+                            letter-spacing: 0.7px;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            resize: none;
+                            padding: 10px;
+                            font-family: 'Poppins', Arial, sans-serif;
+                            font-size: 0.9rem;
+                            color: rgba($secondary-color, 0.7);
+                            outline: none;
+                            border: 1px solid rgba($secondary-color, 0.5);
+
+                        }
+                    }
+
+                    .form_button {
+                        margin-top: 20px;
+
+                        &>button {
+                            background-color: $primary-color;
+                            border: 0;
+                            padding: 15px 30px;
+                            cursor: pointer;
+                            font-weight: 600;
+                            color: $secondary-color;
+                            border-radius: 5px;
+                            box-shadow: 0 10px 20px rgba($secondary-color, 0.4);
+                        }
+                    }
+                }
+
+
+            }
+
+            .form_faqs {
+                padding: 4rem 15% 4rem 2rem;
+
+                .Qs_sub_heading {
+                    color: $primary-color;
+                    font-weight: 600;
+                    text-transform: uppercase;
+
+                }
+
+                .accordion_row {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1rem;
+                    gap: 5px;
+
+                    .accordion_item {
+                        background-color: $white-color;
+                        transition: all 0.5s;
+                        overflow: hidden;
+                        height: 63px;
+
+                        &.faqsToggle {
+                            height: 300px;
+                        }
+
+
+                        border: 1px solid rgba($secondary-color, 0.2);
+
+                        &>.accordion_header {
+                            color: $secondary-color;
+                            font-size: 1.1rem;
+                            transition: all 0.5s;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 20px 30px;
+
+                            &.faqs_active {
+                                background-color: $primary-color;
+                                transition: all 0.5s;
+
+                                &:hover {
+                                    color: $secondary-color;
+                                }
+                            }
+
+                            &:hover {
+                                color: $primary-color;
+                                cursor: pointer;
+                            }
+
+                            &>.accordion_button {
+                                border: 0;
+                                background-color: transparent;
+                                font-size: 1.1rem;
+                                color: $secondary-color;
+                                cursor: pointer;
+                      
+                            }
+
+                            
+
+                        }
+
+                        .content {
+                            margin-top: 25px;
+                            padding: 20px 30px;
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+// <======= Media Queyries For (Medium Devices) ========>
+@media screen and (max-width: 900px) {
+    .contact_section{
+        .container_contact{
+            .contact_row{
+                grid-template-columns: 1fr;
+                .contact_form{
+                    padding: 4rem 1rem 4rem 1rem;
+
+                }
+                .form_faqs{
+                    padding: 4rem 1rem 4rem 1rem;
+                }
+            }
+        }
+    }
+}
+// <======= Media Queyries For (Small Devices) ========>
+@media screen and (max-width: 600px) {
+    .contact_section{
+        .container_contact{
+            .contact_row{
+                grid-template-columns: 1fr;
+                .contact_form{
+                    padding: 4rem 2rem 4rem 2rem;
+
+                    form {
+                        .form_data{
+                            grid-template-columns: 1fr ;
+                        }
+                    }
+
+                    
+                    
+
+                }
+                .form_faqs{
+                    padding: 4rem 1rem 4rem 1rem;
+                }
+            }
+        }
+    }
+}

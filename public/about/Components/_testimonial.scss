@@ -1,0 +1,148 @@
+section {
+    .container {
+        position: relative;
+        
+        &.testimonial_container{
+            display: flex;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .testimonial_row {
+            display: flex;
+            gap: 2rem;
+            margin-top: 40px;
+            align-items: center;
+
+            .slider_box {
+                background-color: $white-color;
+                padding: 25px;
+                display: flex;
+                gap: 20px;
+                width: 357px;
+                height: 100%;
+                transition: transform 0.5s;
+                // transform: translateX(-325%);
+
+                //* this active class we used in javaScript:
+                &.active-slider {
+                    background-color: $primary-color;
+                    transition: all 0.5s;
+
+                    &>.text {
+                        &>.work {
+                            color: $white-color;
+                        }
+
+                        &>.description {
+                            &>p {
+                                color: $white-color;
+                            }
+                        }
+
+                    }
+
+                    .avatar {
+                        .quote {
+                            background-color: $white-color;
+                            color: $primary-color;
+                        }
+                    }
+                }
+
+                .avatar {
+                    position: relative;
+
+                    &>img {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                    }
+
+                    .quote {
+                        position: absolute;
+                        top: 38px;
+                        right: 2px;
+                        font-size: 1.2rem;
+                        background-color: $primary-color;
+                        color: $white-color;
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                .text {
+                    &>.name {
+                        font-weight: 500;
+                        color: $secondary-color;
+                        text-transform: uppercase;
+                        font-size: 1.3rem;
+                        padding: 15px 0 9px 0;
+                        line-height: 1;
+                        
+                    }
+
+                    &>.work {
+                        color: $primary-color;
+                        text-transform: uppercase;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                    }
+
+                    &>.description {
+                        margin-top: 18px;
+                        margin-left: -78px;
+                        padding-bottom: 20px;
+
+                        &>p {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pegination{
+            position: absolute;
+            bottom: -20px;
+            width: 100%;
+            height: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            gap: 1rem;
+           
+               &>.line{
+                width: 40px;
+                height: 2px;
+                background-color: #DDDDDD;
+                border: 0;
+                cursor: pointer;
+                transition: all 0.5s;
+
+                &.line_active{
+                    background-color: $primary-color;
+                }
+               }
+
+
+        }
+    }
+    
+}
+// <======= Media Queyries For (Medium Devices) ========>
+@media screen and (max-width: 600px) {
+    section{
+        .container{
+            .testimonial_row{
+                gap: 1rem;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,325 @@
+section {
+
+    .container {
+        .service_row {
+
+            width: 100%;
+
+
+
+            .service_column {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.6rem;
+
+                .box {
+                    background-color: $white-color;
+                    padding: 30px;
+                    box-shadow: 0 0 10px rgba($secondary-color, 0.1);
+                    display: flex;
+                    gap: 1rem;
+                    color: $white-color;
+                    transition: all 0.5s;
+                    
+
+                    h2 {
+                        font-weight: 500;
+                        line-height: 2;
+                        padding-bottom: 10px;
+                        color: $secondary-color;
+                        line-height: 1.4;
+                    }
+
+                    p {
+                        padding-bottom: 20px;
+                        color: rgba($secondary-color, 0.5);
+                    }
+
+
+                    &:nth-child(1) {
+                        background-color: $white-color;
+                        color: $white-color;
+                        &>img{
+                            
+                        }
+
+                        &:hover {
+                            background-color: $secondary-color;
+
+                            h2 {
+                                color: $white-color;
+                            }
+
+                            p {
+                                color: $white-color;
+                            }
+
+                        }
+                        &:hover img {
+                            filter: brightness(30);
+                        }
+                    }
+                    &:nth-child(2) {
+                        background-color: $white-color;
+                        color: $white-color;
+                        &>img{
+                            
+                        }
+
+                        &:hover {
+                            background-color: $secondary-color;
+
+                            h2 {
+                                color: $white-color;
+                            }
+
+                            p {
+                                color: $white-color;
+                            }
+
+                        }
+                        &:hover img {
+                            filter: brightness(30);
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background-color: $white-color;
+
+                        h2 {
+                            color: $secondary-color;
+                        }
+
+                        p {
+                            color: rgba($secondary-color, 0.5);
+                        }
+
+                        a {
+                            border: 1px solid rgba($secondary-color, 0.2);
+                        }
+
+                        &:hover {
+                            background-color: $secondary-color;
+
+                            h2 {
+                                color: $white-color;
+                            }
+
+                            p {
+                                color: $white-color;
+                            }
+
+                        }
+
+                        &:hover img {
+                            filter: brightness(30);
+                        }
+
+
+                    }
+                    &:nth-child(4) {
+                        background-color: $white-color;
+
+                        h2 {
+                            color: $secondary-color;
+                        }
+
+                        p {
+                            color: rgba($secondary-color, 0.5);
+                        }
+
+                        a {
+                            border: 1px solid rgba($secondary-color, 0.2);
+                        }
+
+                        &:hover {
+                            background-color: $secondary-color;
+
+                            h2 {
+                                color: $white-color;
+                            }
+
+                            p {
+                                color: $white-color;
+                            }
+
+                        }
+
+                        &:hover img {
+                            filter: brightness(30);
+                        }
+
+
+                    }
+                    &:nth-child(5) {
+                        background-color: $white-color;
+
+                        h2 {
+                            color: $secondary-color;
+                        }
+
+                        p {
+                            color: rgba($secondary-color, 0.5);
+                        }
+
+                        a {
+                            border: 1px solid rgba($secondary-color, 0.2);
+                        }
+
+                        &:hover {
+                            background-color: $secondary-color;
+
+                            h2 {
+                                color: $white-color;
+                            }
+
+                            p {
+                                color: $white-color;
+                            }
+
+                        }
+
+                        &:hover img {
+                            filter: brightness(30);
+                        }
+
+
+                    }
+                    &:nth-child(6) {
+                        background-color: $white-color;
+
+                        h2 {
+                            color: $secondary-color;
+                        }
+
+                        p {
+                            color: rgba($secondary-color, 0.5);
+                        }
+
+                        a {
+                            border: 1px solid rgba($secondary-color, 0.2);
+                        }
+
+                        &:hover {
+                            background-color: $secondary-color;
+
+                            h2 {
+                                color: $white-color;
+                            }
+
+                            p {
+                                color: $white-color;
+                            }
+
+                        }
+
+                        &:hover img {
+                            filter: brightness(30);
+                        }
+
+
+                    }
+
+                    .icons {
+                        img {
+                            padding-top: 10px;
+                        }
+                    }
+
+                    a {
+                        text-transform: uppercase;
+                        background-color: $white-color;
+                        color: $primary-color;
+                        padding: 5px 10px;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+
+                    }
+
+
+                }
+            }
+
+
+        }
+    }
+}
+
+// <======= Media Queyries For (Medium Devices) ========>
+@media screen and (max-width: 1100px) {
+    section {
+        .container {
+            width: $container-md;
+
+            .services_row {
+                .image_column {
+                    .image {
+                        width: 450px;
+                        height: 850px;
+                    }
+                }
+
+                .service_column {
+                    .box {
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// <======= Media Queyries For (medium Devices) ========>
+@media screen and (max-width: 900px) {
+    section {
+        .container {
+            .service_row {
+                
+
+                .image_column {
+                    display: none;
+                }
+
+                .service_column {
+                    grid-template-columns: 1fr 1fr;
+
+                    .box {
+                        gap: 2rem;
+                        grid-template-columns: 1fr;
+
+                        h2 {
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// <======= Media Queyries For (Small Devices) ========>
+@media screen and (max-width: 600px) {
+    section {
+        .container {
+            .service_row {
+                
+
+                .image_column {
+                    display: none;
+                }
+
+                .service_column {
+                    grid-template-columns: 1fr;
+
+                    .box {
+                        gap: 2rem;
+                        grid-template-columns: 1fr;
+
+                        h2 {
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
